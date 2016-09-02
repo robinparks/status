@@ -1,15 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="robots" content="index, follow">
 		<title>Status</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-		<link rel="stylesheet" href="milligram.min.css">
 		<link rel="stylesheet" href="style.css">
-		
-		<link rel="icon" href="https://raw.githubusercontent.com/pyupio/statuspage/master/template/favicon.png">
+		<link rel="icon" href="https://raw.githubusercontent.com/jayfk/statuspage/master/template/favicon.png">
+		<link rel="prefetch" type="application/l10n" href="translations.ini" />
 	</head>
 	<body>
 
@@ -19,8 +18,7 @@
 				<section class="container">
 
 					<a class="navigation-title" href="">
-						
-						<img class="img" src="https://raw.githubusercontent.com/pyupio/statuspage/master/template/logo.png" height="30">
+						<img class="img" src="https://raw.githubusercontent.com/jayfk/statuspage/master/template/logo.png" height="30">
 						<h1 class="title">Status</h1>
 					</a>
 
@@ -33,36 +31,36 @@
 				
 					
 					<div class="panel degraded performance">
-						Degraded performance on CDN.
+						<span data-l10n-id="Degraded-performance">Degraded performance</span> <span data-l10n-id="on">on</span> CDN.
 					</div>
 					
 				
 
-				<h4>Systems</h4>
+				<h4 data-l10n-id="systems">Systems</h4>
 				<ul class="systems">
 					
 					<li>
-						API <span class="status operational">operational</span>
+						API <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 					<li>
-						CDN <span class="status degraded performance">degraded performance</span>
+						CDN <span class="status degraded performance" data-l10n-id="degraded-performance">degraded performance</span>
 					</li>
 					
 					<li>
-						Website <span class="status operational">operational</span>
+						Website <span class="status operational" data-l10n-id="operational">operational</span>
 					</li>
 					
 				</ul>
 
-				<h4>Incidents</h4>
+				<h4 data-l10n-id="incidents">Incidents</h4>
 				
 					
 					<div class="incident">
-						<span class="date">2016-07-26 09:29:15</span>
+						<span class="date moment">2016-07-26 09:29:15 UTC</span>
 
 						
-							<span class="label degraded performance float-right">degraded performance</span>
+							<span class="label degraded performance float-right" data-l10n-id="degraded-performance">degraded performance</span>
 						
 						
 							<span class="label system float-right">CDN</span>
@@ -71,14 +69,15 @@
 
 						<span class="title">CDN is under heavy load</span>
 						<p>The CDN is currently under heavy load, we are working on a quick fix by spawning more instances.</p>
+
 						
 					</div>
 					
 					<div class="incident">
-						<span class="date">2016-03-07 09:33:04</span>
+						<span class="date moment">2016-03-07 09:33:04 UTC</span>
 
 						
-							<span class="label operational float-right">resolved</span>
+							<span class="label operational float-right" data-l10n-id="resolved">resolved</span>
 						
 						
 							<span class="label system float-right">API</span>
@@ -87,14 +86,15 @@
 
 						<span class="title">API is down</span>
 						<p>The API is currently not reachable due to networking issues. We're aware of the problem and are working on it.</p>
+
 						
-							<p><em>Update 2016-07-25 10:01:53</em><br/>
-							Investigating the root cause.
-							</p>
+							<p><em>Update <span class="moment">2016-07-25 10:01:53 UTC</span></em></p>
+							<p>Investigating the root cause.</p>
+
 						
-							<p><em>Update 2016-07-26 09:21:17</em><br/>
-							We were able to identify the issue, working on a fix.
-							</p>
+							<p><em>Update <span class="moment">2016-07-26 09:21:17 UTC</span></em></p>
+							<p>We were able to identify the issue, working on a fix.</p>
+
 						
 					</div>
 					
@@ -105,12 +105,11 @@
 			<footer class="footer">
 				<section class="container">
 					<hr/>
-					
-					<p>Status page hosted by GitHub, generated with <a href="https://github.com/pyupio/statuspage">pyupio/statuspage</a></p>
+					<p>Status page hosted by GitHub, generated with <a href='https://github.com/jayfk/statuspage'>jayfk/statuspage</a></p>
 				</section>
 			</footer>
 
 		</main>
-
+		<script src="statuspage.js" type="text/javascript"></script>
 	</body>
 </html>
